@@ -8,6 +8,9 @@
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "stylelint-check": "stylelint-config-prettier-check"
   },
+  "lint-staged": {
+    "*": "your-cmd"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
