@@ -1,3 +1,5 @@
+# 前端标准化
+
 ## prettier
 
 ```sh
@@ -52,14 +54,36 @@ prettier-stylelint
 
 prettier 会将 editorconfig 中兼容的属性转换到 prettier config 文件中去
 
+### Pre-commit Hook
+
+#### lint-stage
+
+#### pretty-quick
+
+#### pre-commit
+
+#### git-format-staged
+
+#### shell script
+
+### git hooks
+
 ## EditorConfig
 
-## Pre-commit Hook
+参考 .editorconfig 文件中的说明
 
 ## eslint
 
 ## stylint
 
+## commitlint
+
+## changelog
+
+## CI/CD
+
 ## webpack
 
 ## babel
+
+## vscode
