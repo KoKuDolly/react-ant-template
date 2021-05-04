@@ -58,13 +58,21 @@ prettier 会将 editorconfig 中兼容的属性转换到 prettier config 文件�
 
 #### lint-stage
 
+用到了 husky 和 lint-stage，或者自己写 node 脚本运行 lint-stage
+
 #### pretty-quick
 
+用到了 husky 和 pretty-quick
+
 #### pre-commit
+
+https://pre-commit.com/
 
 #### git-format-staged
 
 #### shell script
+
+需要掌握 git hooks 和 shell 知识
 
 ### git hooks
 
@@ -87,3 +95,27 @@ prettier 会将 editorconfig 中兼容的属性转换到 prettier config 文件�
 ## babel
 
 ## vscode
+
+## links 参考文档链接
+
+[micromatch](https://github.com/micromatch/micromatch)
+
+[cosmiconfig](https://github.com/davidtheclark/cosmiconfig)
+
+[lint-staged-multi-pkg](https://github.com/sudo-suhas/lint-staged-multi-pkg)
+
+[lint-staged](http://github.com/okonet/lint-staged)
+
+[lint-staged-django-react-demo](https://github.com/sudo-suhas/lint-staged-django-react-demo)
+
+[Git Hooks](https://githooks.com/)
+
+[Blog: automatic-code-formatting](https://www.olioapps.com/blog/automatic-code-formatting/)
+
+[husky](https://typicode.github.io/husky/#/)
+
+[pre-commit](https://pre-commit.com)
+
+[prettier](https://prettier.io)
+
+[vscode](https://code.visualstudio.com)
