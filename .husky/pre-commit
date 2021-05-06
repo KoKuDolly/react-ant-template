@@ -3,3 +3,6 @@
 
 # npm test
 npx lint-staged
+# npm run lint-staged-node
+# yarn lint-staged-cli
+yarn lint-staged-node

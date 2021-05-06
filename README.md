@@ -124,6 +124,10 @@ husky 和 pre-commit 是 git hooks 的管理工具之一，他俩有何异同呢
 
 ## commitlint
 
+https://commitlint.js.org
+
+## git-cz
+
 ## changelog
 
 ## CI/CD
