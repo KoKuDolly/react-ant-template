@@ -9,7 +9,8 @@
     "stylelint-check": "stylelint-config-prettier-check",
     "prettier-api": "node prettier/prettier.dev.config.js",
     "lint-staged-node": "node ./script/lint-staged.js",
-    "lint-staged-cli": "lint-staged"
+    "lint-staged-cli": "lint-staged",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -24,9 +25,17 @@
     "eslint-config-prettier": "^8.3.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
+    "markdownlint": "^0.23.1",
+    "markdownlint-cli": "^0.27.1",
+    "node-filter-async": "^2.0.0",
     "onchange": "^7.1.0",
     "prettier": "2.2.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }

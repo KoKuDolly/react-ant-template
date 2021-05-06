@@ -1,0 +1,7 @@
+exclude: '^$'
+fail_fast: false
+repos:
+  - repo: git@github.com:KoKuDolly/applyList.git
+    rev: v0.0.1
+    hooks:
+      - id: prettier
