@@ -1,4 +1,5 @@
 module.exports = function () {
   var a = 'components'
-  return a
+  var b = 'b'
+  return { a: a, b: b }
 }

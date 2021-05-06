@@ -2,7 +2,9 @@
 
 ## tips
 # 1，当工程没有有些样式没有标准化，有些属性应该置为空。
-# 2，不声明某些属性是通常的做法并可以接受。例如：indent_style = tab 时，就没必要指定 indent_size，或者 tab_width 除非和 indent_size 不一致才需要被指定。
+# 2，不声明某些属性是通常的做法并可以接受。
+# 例如：indent_style = tab 时，就没必要指定 indent_size，
+# 或者 tab_width 除非和 indent_size 不一致才需要被指定。
 
 ## Wildcard Patterns 和 Supported Properties 两个重要概念
 
@@ -41,6 +43,10 @@ charset = utf-8
 [*.py]
 indent_style = space
 indent_size = 4
+
+[*.yaml]
+indent_size = 2
+indent_style = space
 
 # Tab indentation (no size specified)
 [Makefile]
