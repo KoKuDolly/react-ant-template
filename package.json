@@ -9,7 +9,7 @@
     "stylelint-check": "stylelint-config-prettier-check",
     "prettier-api": "node prettier/prettier.dev.config.js",
     "lint-staged-node": "node ./script/lint-staged.js",
-    "lint-staged-cli": "lint-staged",
+    "lint-staged-cli": "npx lint-staged",
     "prepare": "husky install"
   },
   "keywords": [],
