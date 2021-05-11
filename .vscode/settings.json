@@ -24,5 +24,6 @@
   "yaml.format.enable": true,
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
+  "js/ts.implicitProjectConfig.experimentalDecorators": true
 }

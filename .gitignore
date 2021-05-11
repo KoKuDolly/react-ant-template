@@ -4,3 +4,5 @@ node_modules
 **-lock
 **.lock
 **cache
+**.log
+dist
