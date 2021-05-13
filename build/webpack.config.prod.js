@@ -1,6 +1,8 @@
 // const webpack = require('webpack')
+const path = require('path')
 const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ZipPlugin = require('zip-webpack-plugin')
 const baseConfig = require('./webpack.config.base')
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -45,6 +47,10 @@ module.exports = merge(baseConfig, {
       template: 'html/' + name + '.html',
       filename: `${name}.html`,
       title: name,
+		}),
+		new ZipPlugin({
+      path: path.resolve(__dirname, '..'),
+      filename: `${name}.zip`,
     }),
     // new MiniCssExtractPlugin({
     //   ignoreOrder: true,

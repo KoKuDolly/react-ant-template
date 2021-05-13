@@ -1,13 +1,14 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { name } = require('../config')
+const utils = require('./utils')
 
 module.exports = {
   entry: {
     [name]: './src/' + name + '.js',
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: utils.assetsPath('/js/[name].[contenthash].js'),
     path: path.resolve(__dirname, '../dist'),
     clean: true,
   },
@@ -30,7 +31,13 @@ module.exports = {
     },
   },
   module: {
-    rules: [
+		rules: [
+			{
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, '../src'),
+        use: ['babel-loader'],
+      },
       {
         test: /\.css$/i,
         use: [
@@ -52,10 +59,23 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: utils.assetsPath('/img/[name].[contenthash].[ext]'),
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: utils.assetsPath('/fonts/[name].[contenthash].[ext]'),
+        },
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: utils.assetsPath('/media/[name].[contenthash].[ext]'),
+        },
       },
       {
         test: /\.(csv|tsv)$/i,
@@ -65,19 +85,13 @@ module.exports = {
         test: /\.xml$/i,
         use: ['xml-loader'],
       },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        include: path.resolve(__dirname, '../src'),
-        use: ['babel-loader'],
-      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       ignoreOrder: true,
-      filename: '[name].[contenthash].css',
-      chunkFilename: '[id].[contenthash].css',
+      filename: utils.assetsPath('/css/[name].[contenthash].css'),
+      chunkFilename: utils.assetsPath('/css/[id].[contenthash].css'),
     }),
   ],
 }
