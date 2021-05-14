@@ -1,16 +1,17 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const { name } = require('../config')
+const { projectName, assetsPublicPath } = require('../config')
 const utils = require('./utils')
 
 module.exports = {
   entry: {
-    [name]: './src/' + name + '.js',
+    [projectName]: './src/index.js',
   },
   output: {
     filename: utils.assetsPath('/js/[name].[contenthash].js'),
     path: path.resolve(__dirname, '../dist'),
-    clean: true,
+		clean: true,
+		publicPath: assetsPublicPath,
   },
   resolve: {
     alias: {

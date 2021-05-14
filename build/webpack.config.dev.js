@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const baseConfig = require('./webpack.config.base')
-const { name } = require('../config')
+const { projectName } = require('../config')
 
 module.exports = merge(baseConfig, {
   mode: 'development',
@@ -9,7 +9,7 @@ module.exports = merge(baseConfig, {
   devServer: {
     contentBase: './dist',
     hot: true,
-    port: 2224,
+    port: 2225,
     host: '127.0.0.1',
     open: true,
     proxy: {
@@ -22,8 +22,8 @@ module.exports = merge(baseConfig, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'html/' + name + '.html',
-      title: name,
+      template: 'html/' + projectName + '.html',
+      title: projectName,
     }),
   ],
 })

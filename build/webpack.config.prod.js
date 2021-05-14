@@ -2,15 +2,26 @@
 const path = require('path')
 const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const ZipPlugin = require('zip-webpack-plugin')
 const baseConfig = require('./webpack.config.base')
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const { name } = require('../config')
+const { projectName } = require('../config')
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  optimization: {
+	optimization: {
+		minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+        },
+      }),
+    ],
     splitChunks: {
       chunks: 'async',
       minSize: 20000,
@@ -44,13 +55,13 @@ module.exports = merge(baseConfig, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'html/' + name + '.html',
-      filename: `${name}.html`,
-      title: name,
+      template: 'html/' + projectName + '.html',
+      filename: `${projectName}.html`,
+      title: projectName,
 		}),
 		new ZipPlugin({
       path: path.resolve(__dirname, '..'),
-      filename: `${name}.zip`,
+      filename: `${projectName}.zip`,
     }),
     // new MiniCssExtractPlugin({
     //   ignoreOrder: true,
