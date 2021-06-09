@@ -6,10 +6,10 @@ module.exports = function (api) {
       '@babel/preset-env',
       {
         targets: {
-          ie: 9,
+          ie: 10,
         },
-        useBuiltIns: 'usage',
-        corejs: '3.6.4',
+        useBuiltIns: 'usage', // babel会按需加载polyfill，不需要全局入口引入，也无须手动引入
+        corejs: '3.12.0', // 版本号最好具体到小版本，对应项目中core-js的版本
       },
     ],
     [
@@ -28,9 +28,11 @@ module.exports = function (api) {
         style: 'css', // `style: true` 会加载 less 文件
       },
     ],
-    '@babel/plugin-syntax-jsx',
-    '@babel/plugin-transform-react-jsx',
-    '@babel/plugin-transform-react-display-name',
+    // @babel/preset-env 预设包含，无须加载了，预设就是插件的集合，方便使用的
+    // '@babel/plugin-syntax-jsx',
+    // '@babel/plugin-transform-react-jsx',
+    // '@babel/plugin-transform-react-display-name',
+    // @babel/preset-env 开启development模式会加载下面这俩插件
     // '@babel/plugin-transform-react-jsx-self',
     // '@babel/plugin-transform-react-jsx-source'
   ]

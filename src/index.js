@@ -1,4 +1,7 @@
 /* eslint-env es2021 */
+// 没有用三方的polyfills
+import './libs/polyfills/object.assign.polyfill' // 兼容ie
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { ConfigProvider } from 'antd'

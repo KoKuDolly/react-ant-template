@@ -10,8 +10,18 @@ module.exports = {
   output: {
     filename: utils.assetsPath('/js/[name].[contenthash].js'),
     path: path.resolve(__dirname, '../dist'),
-		clean: true,
-		publicPath: assetsPublicPath,
+    clean: true,
+    publicPath: assetsPublicPath,
+    // 兼容 ie
+    environment: {
+      arrowFunction: false, // 环境不支持箭头函数
+      bigIntLiteral: false, // 不支持BigInt
+      const: false, // ie 10不支持const
+      destructuring: false, // 不支持解构
+      dynamicImport: false, // 不支持异步import
+      forOf: false, // 不支持for...of
+      module: false, // 不支持module
+    },
   },
   resolve: {
     alias: {
@@ -32,8 +42,8 @@ module.exports = {
     },
   },
   module: {
-		rules: [
-			{
+    rules: [
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         include: path.resolve(__dirname, '../src'),

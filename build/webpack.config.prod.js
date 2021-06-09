@@ -11,11 +11,12 @@ const { projectName } = require('../config')
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-	optimization: {
-		minimize: true,
+  optimization: {
+    minimize: true,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
+          ecma: 5, // 兼容ie
           compress: {
             drop_console: true,
           },
@@ -58,8 +59,8 @@ module.exports = merge(baseConfig, {
       template: 'html/' + projectName + '.html',
       filename: `${projectName}.html`,
       title: projectName,
-		}),
-		new ZipPlugin({
+    }),
+    new ZipPlugin({
       path: path.resolve(__dirname, '..'),
       filename: `${projectName}.zip`,
     }),
