@@ -1,6 +1,6 @@
 {
   "name": "apply-list-0.0.1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -15,7 +15,9 @@
     "build": "webpack --config build/webpack.config.prod.js",
     "commit": "commit",
     "commitmsg": "commitlint -x @commitlint/config-conventional -E GIT_PARAMS",
-    "cz": "cz"
+    "cz": "cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "changelog:node": "node ./script/changelog.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,7 @@
   "dependencies": {
     "antd": "3.26.19",
     "axios": "^0.21.1",
+    "conventional-changelog": "^3.1.24",
     "core-js": "^3.12.0",
     "file-saver": "^2.0.5",
     "react": "^17.0.2",
@@ -42,9 +45,11 @@
     "@commitlint/prompt-cli": "^12.1.4",
     "babel-loader": "^8.2.2",
     "babel-plugin-import": "^1.13.3",
+    "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.4",
     "css-minimizer-webpack-plugin": "^2.0.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.23.2",
@@ -75,5 +80,10 @@
     "*.js": "eslint --cache --fix",
     "*.css": "stylelint --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }

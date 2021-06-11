@@ -6,3 +6,8 @@
 # npm run lint-staged-node
 # yarn lint-staged-cli
 yarn lint-staged-node
+# yarn commit
+# yarn cz
+# git cz
+# yarn commitmsg
+yarn changelog
