@@ -1,8 +1,9 @@
-## [0.0.2](https://github.com/KoKuDolly/koku-scaffold/compare/v0.0.1...v0.0.2) (2021-06-11)
+## [0.0.2](https://github.com/KoKuDolly/koku-scaffold/compare/v0.0.1...v0.0.2) (2021-12-29)
 
 
 ### Bug Fixes
 
+* change changelog script ([b1b9aff](https://github.com/KoKuDolly/koku-scaffold/commit/b1b9aff2c1c75ac38a7d62d524c3bd79e370a691))
 * fix eslintrc.js ([df3653b](https://github.com/KoKuDolly/koku-scaffold/commit/df3653b94d53b8669a7dffccf7e78fafacccfa30))
 * text components/index.js ([5c72ddf](https://github.com/KoKuDolly/koku-scaffold/commit/5c72ddf46664277af00da90fbfe06546941a601f))
 * up ([6ac9b16](https://github.com/KoKuDolly/koku-scaffold/commit/6ac9b16f71b04a3ba7ed7b5bdb4082e7cbc9e169))
