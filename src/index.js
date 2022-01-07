@@ -12,6 +12,7 @@ import 'antd/dist/antd.css'
 moment.locale('zh-cn')
 
 import App from './pages/EditTreeTable/'
+import Theme from './components/theme-button/theme'
 
 const { projectName } = require('../config/')
 // console.log(projectName)
@@ -19,6 +20,7 @@ const { projectName } = require('../config/')
 ReactDOM.render(
   <ConfigProvider locale={zhCN}>
     <App />
+    <Theme />
   </ConfigProvider>,
   document.getElementById(projectName)
 )
