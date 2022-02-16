@@ -5,7 +5,7 @@ const { projectName } = require('../config')
 
 module.exports = merge(baseConfig, {
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   devServer: {
     contentBase: './dist',
     hot: true,
