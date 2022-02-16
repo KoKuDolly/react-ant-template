@@ -25,7 +25,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '../src'),
+			'@': path.resolve(__dirname, '../src'),
+			'@mock': path.resolve(__dirname, '../mock')
     },
   },
   optimization: {
