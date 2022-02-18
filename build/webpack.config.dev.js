@@ -11,7 +11,8 @@ module.exports = merge(baseConfig, {
     hot: true,
     port: 2225,
     host: '127.0.0.1',
-    open: true,
+		open: true,
+		historyApiFallback: true,
     proxy: {
       '/admin/**': {
         target: 'http://127.0.0.1:8082',
