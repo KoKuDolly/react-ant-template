@@ -19,4 +19,4 @@ export default function Hooks() {
 }
 
 // setState(updater, [callback]) callback === componentDidUpdate 但是 callback没有参数。这里的setState是 浅合并
-// [state, setState] = useState 的 setState 方法只有一个参数，而且不是函数，这里的setState是 替换
+// [state, setState] = useState 的 setState 方法只有一个参数，可以是函数!!!，这里的setState是 替换
