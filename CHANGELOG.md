@@ -1,4 +1,4 @@
-## [0.0.2](https://github.com/KoKuDolly/koku-scaffold/compare/v0.0.1...v0.0.2) (2022-02-18)
+## [0.0.2](https://github.com/KoKuDolly/koku-scaffold/compare/v0.0.1...v0.0.2) (2022-02-23)
 
 
 ### Bug Fixes
@@ -23,6 +23,7 @@
 * add new files ([2bf0022](https://github.com/KoKuDolly/koku-scaffold/commit/2bf00223038e9785a9717d12466d0205f3ea70a9))
 * add zip-webpack-plugin ([e531585](https://github.com/KoKuDolly/koku-scaffold/commit/e53158598408e5db96579fe9b1222a5fdc91d508))
 * changes ([3b25fc9](https://github.com/KoKuDolly/koku-scaffold/commit/3b25fc9a381e2f40ef320724a5db6e54921dfb9c))
+* historyApiFallback ([16b7a73](https://github.com/KoKuDolly/koku-scaffold/commit/16b7a7318a20500d853fef1bb5478e6e42524f27))
 * test ([699a2ba](https://github.com/KoKuDolly/koku-scaffold/commit/699a2ba52b63b22cd11c80f3cae3995a8fa81cc5)), closes [#12](https://github.com/KoKuDolly/koku-scaffold/issues/12)
 * up ([fa4dbe5](https://github.com/KoKuDolly/koku-scaffold/commit/fa4dbe594660425e50dad54f68f1c8ff9a43b390))
 * up ([9ea39c0](https://github.com/KoKuDolly/koku-scaffold/commit/9ea39c08767d52cdcfe4f04c70a38596e4d954e3))

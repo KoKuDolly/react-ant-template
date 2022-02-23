@@ -4,8 +4,9 @@ export default function Layout() {
   return (
     <>
       <nav>
-        <Link to="/login">login</Link> | <Link to="/home">home</Link> |
-        <Link to="/about">About</Link>
+        <Link to="/login">login</Link> | <Link to="/home">home</Link> |{' '}
+        <Link to="/about">About</Link> | <Link to="/hooks">Hooks</Link> |{' '}
+        <Link to="/class">Class</Link>
       </nav>
       <Outlet />
     </>

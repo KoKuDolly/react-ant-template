@@ -16,7 +16,9 @@ import App from '@/components/Layout/index'
 import Home from '@/components/normal/home/index'
 import Login from '@/components/normal/login/index'
 import About from '@/pages/about/index'
-import Invoice from './pages/about/invoice'
+import Invoice from '@/pages/about/invoice'
+import Hooks from '@/pages/hooks/index'
+import Class from '@/pages/class/index'
 
 const { projectName } = require('../config/')
 
@@ -44,6 +46,8 @@ ReactDOM.render(
             ></Route>
             <Route path=":aboutId" element={<Invoice />}></Route>
           </Route>
+          <Route path="hooks" element={<Hooks />}></Route>
+          <Route path="class" element={<Class />}></Route>
           <Route
             path="*"
             element={
