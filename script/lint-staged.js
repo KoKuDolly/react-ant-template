@@ -1,7 +1,7 @@
 const path = require('path')
 const lintStaged = require('lint-staged')
 
-// console.log(process.cwd(), __dirname)
+// console.log(4, process.cwd(), __dirname)
 const cwd = process.cwd()
 
 async function lintStagedWrapper() {
